@@ -1,0 +1,10 @@
+name: MT Plugins Test
+author_name: Kunihiko Miyanaga
+author_link: http://www.ideamans.com/
+version: 0.1
+# l10n_class: MT::CMS::UI::Util::L10N
+
+applications:
+    cms:
+        methods:
+            plugins_test_self_test: $PluginsTest::MT::Plugins::Test::self_test_handler

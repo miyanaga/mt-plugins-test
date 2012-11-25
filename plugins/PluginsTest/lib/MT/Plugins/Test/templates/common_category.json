@@ -1,0 +1,10 @@
+{
+   "allow_pings" : "0",
+   "author_id" : null,
+   "basename" : "test",
+   "class" : "category",
+   "description" : null,
+   "label" : "Test Category",
+   "parent" : "0",
+   "ping_urls" : null
+}
