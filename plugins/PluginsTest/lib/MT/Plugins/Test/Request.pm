@@ -209,7 +209,6 @@ sub test_user_mech {
             my $mech = $self->build_mech(%args);
 
             if ( $signin ) {
-                print STDERR $self->signin_uri . "signin\n";
                 my $res = $mech->post($self->signin_uri, { username => $author->name, password => $password });
             }
 

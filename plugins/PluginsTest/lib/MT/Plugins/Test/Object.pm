@@ -170,7 +170,7 @@ sub test_common_website {
     my $blog_args = $args{blog} || {};
     my $blog_values = $blog_args->{values} || {};
     my $test = $args{test};
-    my $no_theme = $args{no_theme};
+    my $apply_themes = $args{apply_themes};
 
     my $password = delete $author_values->{password} || $DEFAULT_PASSWORD;
 
@@ -190,7 +190,7 @@ sub test_common_website {
                 values => $website_values,
                 test => sub {
                     my $website = shift;
-                    $website->apply_theme unless $no_theme;
+                    $website->apply_theme if $apply_themes;
 
                     $blog_values->{parent_id} = $website->id;
                     test_object
@@ -199,7 +199,7 @@ sub test_common_website {
                         values => $blog_values,
                         test => sub {
                             my $blog = shift;
-                            $blog->apply_theme unless $no_theme;
+                            $blog->apply_theme if $apply_themes;
 
                             $test->($website, $blog, $author, $password);
                         };
