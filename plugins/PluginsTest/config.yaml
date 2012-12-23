@@ -4,6 +4,13 @@ author_link: http://www.ideamans.com/
 version: 0.1
 # l10n_class: MT::CMS::UI::Util::L10N
 
+settings:
+    config1:
+        scope: system
+        default: config-1
+    config2:
+        scope: system
+
 applications:
     cms:
         methods:
